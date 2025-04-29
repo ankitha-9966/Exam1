@@ -21,7 +21,7 @@ pipeline {
             stage ('Test') {
                 steps {
                     bat '''
-                        call .venv\\Scripts\\activate
+                        call .\\venv\\Scripts\\activate
                         pytest test.py
                         '''
                 }
@@ -30,7 +30,7 @@ pipeline {
             stage ('Deploy') {
                 steps {
                     bat '''
-                    call .venv\\Scripts\\activate
+                    call .\\venv\\Scripts\\activate
                     "C:\\Users\\ADMIN\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" Library.py
                     '''
                 }
